@@ -3,24 +3,245 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
+@media only screen and (max-width : 1330px)
+  .main-home__slider
+    width: 860px
+
+  .main-home .box-column
+    width: calc(100% - 860px)
+
+@media only screen and (max-width : 1250px)
+  .phones-wrapper
+    margin: 0 auto
+
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
+@media only screen and (max-width : 1199px)
+  .main-home__slider
+    width: 660px
 
+  .main-home .box-column
+    width: calc(100% - 660px)
+
+  .phone-box
+    margin: 0 20px 0 0
+
+  .logo
+    max-width: 140px
+
+  .slogan-company
+    font-size: 12px
+    max-width: 150px
+
+  .menu-item
+    margin: 0 20px 0 0
+
+  .form-search
+    width: calc(100% - 248px - 370px)
+
+  .menu
+    padding: 6px 20px
+    margin: 0 auto 0 0
+
+  .schedule
+    font-size: 11px
+    p
+      font-size: 12px
+      margin: 0 0 5px
+
+  .container
+    padding: 0 20px
+
+  .basket-icons
+    width: 40px
+    height: 40px
+    padding: 12px
+
+@media only screen and (max-width : 992px)
+  .slogan-company
+    display: none
+
+  .logo
+    margin: 0
+
+  .menu-links
+    font-size: 14px
+
+  .header-bottom .container
+    padding: 0
+
+  .form-search
+    width: calc(100% - 320px - 248px)
+
+  .header-dropDown
+    left: 0
+
+  .main-home__slider
+    width: 60%
+
+  .main-home .box-column
+    width: 40%
+
+  .main-home__slider-box
+    padding: 70px 30px
+
+  .title-slider
+    font-size: 30px
+    line-height: normal
+    strong
+      font-size: 34px
+
+  .article-slider
+    padding: 45px 20px 30px
 
 /* Small Devices, Tablets */
+@media only screen and (max-width : 810px)
+  .ui-widget, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active, .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus, .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus
+    border: none
+    padding: 0
+
+  .ui-selectmenu-button.ui-button
+    min-width: auto
+
+  .ui-button .ui-icon, .ui-button .ui-icon, .ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus .ui-icon
+    margin: 0 0 0 10px
+
+  .ui-selectmenu-button.ui-button
+    height: auto
+
+  header
+    margin: 0
+    .schedule, .menu, .home-menu
+      display: none
+    .store-quantity
+      margin: 0 auto
+
+
+  .btn-burger
+    display: flex
+
+  .catalog-item
+    width: 180px
+    padding: 15px 20px
+    font-size: 12px
+    &:before
+      width: 16px
+      height: 16px
+      margin: 0 10px 0 0
+    &:after
+      margin: 0 0 0 auto
+      width: 8px
+      height: 8px
+
+  .form-search
+    display: none
+
+  .form-search-mobile
+    display: flex
+    width: calc(100% - 180px)
+
+  .menu-dropDown__item, .menu-dropDown-submenu__item, .header-dropDown
+    width: 100%
+
+  .menu-dropDown-submenu
+    position: relative
+    left: 0
+    top: 0
+
+  .header-dropDown.open
+    width: 100%
+
+  .menu-dropDown-submenu-level2
+    position: relative
+    left: 0
+    top: 0
+    padding: 20px 35px
+    width: 100%
+    h3
+      font-weight: normal
+      margin: 0 0 15px
+      font-size: 14px
+
+  .list-manufacturers
+    column-count: 1
+
+  .menu-dropDown__links
+    padding: 14px 20px
+
+  .menu-dropDown__links:hover:after
+    transform: rotate(0)
+
+  .menu-dropDown__links:hover
+    background: #fff
+
+  .main-home .box-column
+    width: 100%
+    padding: 0
+
+  .main-home
+    .container
+      padding: 0
+
+  .main-home__slider
+    width: 100%
+
+  .main-home__slider-box
+    height: auto
+    padding: 60px 20px 92px
+
+  .main-home__slider .slick-dots
+    bottom: 35px
+    padding: 0 20px
+
+  .article-item
+    order: 1
+    margin: 0
+
 @media only screen and (max-width : 768px)
-	/**/
+  header
+    .phones-wrapper, .store-quantity
+      display: none
+
+  .header-top
+    padding: 16px 0
+
+  .logo
+    max-width: 122px
+
+  .header-center
+    padding: 18px 0 15px
+
+  .basket-wrapper
+    font-size: 10px
+
+  .basket-value__sum
+    font-size: 12px
+
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+  .title-slider
+    margin: 13px 0 10px
+    font-size: 24px
+    line-height: 120%
+    strong
+      font-size: 24px
 
+  .main-home__slider-description
+    font-size: 14px
+    line-height: 150%
+
+  .main-home__slider-box .btn
+    margin: 28px 0 0
+
+  .article-slider
+    height: auto
+    padding: 45px 20px 89px
+
+  .article-item__content
+    padding: 30px 20px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

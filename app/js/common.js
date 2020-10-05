@@ -39,7 +39,15 @@ $('.main-home__slider').slick({
     dots: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>',
-    fade: true
+    fade: true,
+    responsive: [
+        {
+            breakpoint: 480,
+            settings: {
+                arrows: false
+            }
+        }
+    ]
 });
 
 $('.staff-slider').slick({
@@ -101,6 +109,14 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
     $(this)
         .addClass('active').siblings().removeClass('active')
         .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+});
+
+$('.btn-burger').click(function () {
+   $('.mobile-menu').fadeIn();
+});
+
+$('.btn-close').click(function () {
+    $('.mobile-menu').fadeOut();
 });
 
 // Menu Tachscrin. если есть выпадающий список по hover. Первый клик-выпадает меню, второй клик-переход по ссылке
