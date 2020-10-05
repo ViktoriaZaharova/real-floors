@@ -185,7 +185,7 @@ select
     size: contain
   width: 10px
   height: 10px
-  margin: 0 0 0 14px
+  margin: 0 0 0 auto
   order: 1
 
 .ui-menu:before
@@ -199,6 +199,9 @@ select
   margin: 0
   display: flex
   align-items: center
+  min-width: 192px
+  height: 30px
+  background: $accent
 
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover
   background: $accent2
@@ -930,25 +933,36 @@ button
 footer
   background: $accent
   color: #fff
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    top: 0
+    transform: translate(-50%,0)
+    max-width: 1390px
+    width: 100%
+    height: 1px
+    background: #433555
   .logo
     max-width: 165px
     margin: 0 0 13px
 
 
 .footer-top
-  padding: 0 30px
   .container
     align-items: flex-start
-    justify-content: space-between
-    border-top: 1px solid #433555
-    padding: 56px 25px 0
+
+    padding: 56px 55px 0
 
 .footer-box
-  margin: 0 0 65px
+  margin: 0 112px 65px 0
   h3
     margin: 0 0 30px
     font-size: 20px
     font-weight: 500
+  &:last-child
+    margin-right: 0
 
 .footer-menu
   li
@@ -965,10 +979,11 @@ footer
   font-weight: 500
   color: #71637C
   width: 100%
-  padding: 49px 30px
+
   .container
     align-items: center
     justify-content: space-between
+    padding: 49px 189px 49px 55px
 
 .links-white
   color: #fff
@@ -998,10 +1013,10 @@ footer
 
 .footer-bottom
   width: 100%
-  padding: 0 30px
   .container
     align-items: flex-start
     justify-content: space-between
+    padding: 0 142px 0 55px
 
 .footer-item
   font-size: 14px
@@ -1085,9 +1100,18 @@ footer
 
 //staff
 .staff
-  background: url("../img/figure.svg") no-repeat center bottom
-    size: 100%
+
   padding: 0 0 70px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    height: 332px
+    width: 100%
+    background: url("../img/figure.svg") no-repeat center top
+      size: 100%
   h2
     width: 100%
     max-width: 622px
@@ -1591,7 +1615,6 @@ footer
   align-items: flex-end
   justify-content: center
   color: #fff
-  cursor: pointer
   &:before
     content: ''
     position: absolute
@@ -1602,16 +1625,15 @@ footer
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(56, 41, 75, 0.55) 100%)
   >*
     position: relative
+  &:hover
+    .sentence
+      padding: 0 16px
+      border-radius: 19px
+      width: auto
+      .text
+        display: block
 
-.popular-category__box.click
-  .sentence
-    padding: 0 16px
-    border-radius: 19px
-    width: auto
-    .text
-      display: block
-
-.slick-slider
+.slick-slide
   outline: none
 
 .popular-category__box-img
@@ -1661,6 +1683,10 @@ footer
   color: #F6F4F9
   font-size: 12px
   font-weight: bold
+  &:hover
+    background: $accent2
+    border-color: $accent2
+    color: #fff
 
 
 

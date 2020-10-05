@@ -54,7 +54,7 @@ $('.staff-slider').slick({
 });
 
 $('.reviews-slider').slick({
-    slidesToShow: 3,
+    slidesToShow: 4,
     variableWidth: true,
     dots: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
@@ -102,10 +102,6 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
         .addClass('active').siblings().removeClass('active')
         .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
 });
-
-$('.popular-category__box').click(function () {
-    $(this).toggleClass('click');
-})
 
 // Menu Tachscrin. если есть выпадающий список по hover. Первый клик-выпадает меню, второй клик-переход по ссылке
 function isTouchDevice() {
