@@ -56,6 +56,7 @@ $('.staff-slider').slick({
 $('.reviews-slider').slick({
     slidesToShow: 3,
     variableWidth: true,
+    dots: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>',
     appendArrows: '.reviews-slider__nav',
@@ -65,9 +66,11 @@ $('.reviews-slider').slick({
 $('.popular-category-slider').slick({
     slidesToShow: 4,
     variableWidth: true,
+    dots: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>',
     appendArrows: '.popular-category-slider__nav',
+    appendDots: '.popular-category-slider__dots'
 });
 
 $('.article-slider').slick({

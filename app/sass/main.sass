@@ -95,7 +95,7 @@ a
 .container
   margin: 0 auto
   width: 100%
-  max-width: 1490px
+  max-width: 1440px
   padding: 0 25px
   flex-wrap: wrap
   display: flex
@@ -449,8 +449,7 @@ label
   width: 100%
 
 .form-search
-  width: 100%
-  max-width: 692px
+  width: calc(100% - 248px - 450px)
   display: flex
   align-items: stretch
   position: relative
@@ -505,7 +504,7 @@ button
   display: none
 
 .header-dropDown.open
-  width: 100%
+  width: calc(100% - 50px)
 
 .menu-dropDown
   position: relative
@@ -1222,6 +1221,14 @@ footer
   font-size: 14px
   font-weight: 500
 
+.reviews-slider__dots, .popular-category-slider__dots
+  .slick-dots
+    li
+      background: #F6F4F9
+    .slick-active
+      background: $accent2
+
+
 .reviews-slider__box-text
   margin: 22px 0 0
   font-size: 14px
@@ -1571,14 +1578,14 @@ footer
     margin: 0 8px 0 0
 
 //popular-category
-.popular-category
-  padding: 0 0 74px
+//.popular-category
+//  padding: 0 0 70px
 
 .popular-category__box
   width: 405px
   height: 305px
   position: relative
-  margin: 0 25px 0 0
+  margin: 0 25px 40px 0
   overflow: hidden
   display: flex
   align-items: flex-end
