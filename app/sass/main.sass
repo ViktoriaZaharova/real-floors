@@ -1409,13 +1409,21 @@ footer
 .product-card
   margin: 0 0 25px
   width: 100%
-  border: 1px solid #F6F4F9
   background: #fff
   transition: .3s ease
+  height: 579px
   &:hover
+    border-color: transparent
+    z-index: 1
     box-shadow: 0 30px 54px rgba(56, 41, 75, 0.14)
+    .product-card__body-wrapper
+      overflow: visible
     .btn-add-card
       display: flex
+    .product-card__body
+      height: auto
+
+
 
 .btn-add-card
   width: 100%
@@ -1553,10 +1561,25 @@ footer
 .tabs
   width: 100%
 
+.product-card__body-wrapper
+  position: relative
+  height: calc(100% - 258px)
+  overflow: hidden
+  z-index: 2
+  border-bottom: 1px solid #F6F4F9
+
 .product-card__body
   padding: 20px
   font-size: 12px
   font-weight: 500
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  background: #fff
+  height: 100%
+  border: 1px solid #F6F4F9
+
 
 .code-product
   display: flex
