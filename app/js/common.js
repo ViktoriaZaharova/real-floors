@@ -58,7 +58,15 @@ $('.staff-slider').slick({
     nextArrow: '<button type="button" class="slick-next"></button>',
     appendArrows: '.staff-slider__nav',
     infinite: false,
-    appendDots: '.staff-slider__dots'
+    appendDots: '.staff-slider__dots',
+    responsive: [
+        {
+            breakpoint: 480,
+            settings: {
+                appendArrows: '.staff-slider',
+            }
+        }
+    ]
 });
 
 $('.reviews-slider').slick({
@@ -68,7 +76,15 @@ $('.reviews-slider').slick({
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>',
     appendArrows: '.reviews-slider__nav',
-    appendDots: '.reviews-slider__dots'
+    appendDots: '.reviews-slider__dots',
+    responsive: [
+        {
+            breakpoint: 480,
+            settings: {
+                appendArrows: '.reviews-slider',
+            }
+        }
+    ]
 });
 
 $('.popular-category-slider').slick({
@@ -84,7 +100,6 @@ $('.popular-category-slider').slick({
             breakpoint: 480,
             settings: {
                 appendArrows: '.popular-category-slider',
-                arrows: true
             }
         }
     ]
@@ -106,6 +121,17 @@ $('.article-slider').slick({
 $(".article-slider").on('afterChange', function(event, slick, currentSlide){
     $(".cp").text(currentSlide<10?`0${currentSlide+1}`:currentSlide+1);
 });
+
+// slick active
+$('.products-slider').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    arrows: false,
+    variableWidth: true,
+    centerMode: true
+});
+// slick active
 
 $("body").on("click", ".btn-scroll-top", function (e) {
     e.preventDefault();

@@ -993,11 +993,11 @@ footer
 .footer-top
   .container
     align-items: flex-start
-
+    justify-content: space-between
     padding: 56px 55px 0
 
 .footer-box
-  margin: 0 112px 65px 0
+  margin: 0 0 65px 0
   h3
     margin: 0 0 30px
     font-size: 20px
@@ -1020,7 +1020,8 @@ footer
   font-weight: 500
   color: #71637C
   width: 100%
-
+  .links-doc
+    display: none
   .container
     align-items: center
     justify-content: space-between
@@ -1067,6 +1068,9 @@ footer
     margin: 0 153px 9px auto
   &:first-child
     margin: 0 78px 9px 0
+  &:last-child
+    .list-social
+      display: none
   h3
     color: #71637C
     font-size: 14px
@@ -1152,7 +1156,7 @@ footer
     height: 332px
     width: 100%
     background: url("../img/figure.svg") no-repeat center top
-      size: 100%
+      size: cover
   h2
     width: 100%
     max-width: 622px
@@ -1269,6 +1273,16 @@ footer
   width: 405px
   height: 316px
   padding: 30px 25px 30px 30px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    right: 28px
+    top: 25px
+    background: url("../img/quotes.svg") no-repeat center
+      size: contain
+    width: 41px
+    height: 34px
   .name
     color: #38294B
     font-size: 18px
@@ -1422,6 +1436,13 @@ footer
 .col-20
   width: 20%
   padding: 0 12.5px
+
+.products-slider
+  display: none
+  .slick-dots
+    li
+      &:before
+        background: #F6F4F9
 
 .product-card
   margin: 0 0 25px
