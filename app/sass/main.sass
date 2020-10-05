@@ -384,6 +384,7 @@ header
   .container
     align-items: center
     flex-wrap: nowrap
+    position: relative
 
 .catalog-item
   background: #38294B
@@ -394,10 +395,6 @@ header
   cursor: pointer
   transition: .3s ease
   width: 248px
-  &:hover
-    background: $accent2
-    &:after
-      transform: rotate(180deg)
   &:after
     margin: 0 0 0 31px
   &:before
@@ -412,7 +409,7 @@ header
 .catalog-item.active
   background: $accent2
   &:after
-    transform: rotate(180deg)
+    transform: rotate(-180deg)
 
 .menu
   display: flex
@@ -508,7 +505,7 @@ button
   display: none
 
 .header-dropDown.open
-  width: calc(100% - 50px)
+  width: 100%
 
 .menu-dropDown
   position: relative

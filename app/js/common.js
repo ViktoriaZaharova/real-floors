@@ -20,6 +20,7 @@ $(document).mouseout(function (e) { // событие клика по веб-д�
     var btn = $('.header-dropDown');
     if (!div.is(e.target) // если клик был не по нашему блоку
         && !btn.is(e.target) && btn.has(e.target).length === 0) {
+        div.removeClass('active');
         btn.fadeOut();
     }
 });

@@ -523,7 +523,8 @@ header {
         -ms-flex-align: center;
             align-items: center;
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap; }
+        flex-wrap: nowrap;
+    position: relative; }
 
 .catalog-item {
   background: #38294B;
@@ -535,11 +536,6 @@ header {
   -webkit-transition: .3s ease;
   transition: .3s ease;
   width: 248px; }
-  .catalog-item:hover {
-    background: #F57600; }
-    .catalog-item:hover:after {
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg); }
   .catalog-item:after {
     margin: 0 0 0 31px; }
   .catalog-item:before {
@@ -554,8 +550,8 @@ header {
 .catalog-item.active {
   background: #F57600; }
   .catalog-item.active:after {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
 
 .menu {
   display: -webkit-box;
@@ -678,7 +674,7 @@ button {
   display: none; }
 
 .header-dropDown.open {
-  width: calc(100% - 50px); }
+  width: 100%; }
 
 .menu-dropDown {
   position: relative;
