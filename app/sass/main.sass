@@ -680,6 +680,17 @@ button
   display: flex
   align-items: center
   justify-content: center
+  height: 58px
+  img
+    transition: .3s ease
+  &:hover
+    img
+      display: none
+    .img-hover
+      display: block
+
+.img-hover
+  display: none
 
 .btn-orange
   background: $accent2
