@@ -54,7 +54,7 @@ $('.staff-slider').slick({
 });
 
 $('.reviews-slider').slick({
-    slidesToShow: 4,
+    slidesToShow: 3,
     variableWidth: true,
     dots: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',

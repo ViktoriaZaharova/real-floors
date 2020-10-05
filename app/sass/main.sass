@@ -712,12 +712,24 @@ button
   align-items: center
   justify-content: center
   li
-    background: #FFFFFF
-    width: 10px
-    height: 10px
+
+    width: 16px
+    height: 16px
     border-radius: 50%
     transition: .3s ease
     margin: 0 18px 0 0
+    position: relative
+    border: 2px solid transparent
+    &:before
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: #FFFFFF
     &:last-child
       margin: 0
     button
@@ -726,8 +738,10 @@ button
     background: #F57600
     width: 16px
     height: 16px
-    box-shadow: 0px 4px 9px rgba(245, 118, 0, 0.46)
+    box-shadow: 0 4px 9px rgba(245, 118, 0, 0.46)
     border: 2px solid #FFFFFF
+    &:before
+      display: none
 
 .slick-arrow
   z-index: 1
@@ -1138,7 +1152,8 @@ footer
     bottom: 0
     width: 100%
     li
-      background: #433555
+      &:before
+        background: #433555
     .slick-active
       background: $accent2
 
@@ -1184,6 +1199,8 @@ footer
   color: #928B97
   font-size: 12px
 
+.staff-slider
+  padding-left: 25px
 
 .avatar
   display: flex
@@ -1229,6 +1246,9 @@ footer
 .reviews
   padding: 120px 0 0
 
+.reviews-slider
+  padding-left: 25px
+
 .reviews-slider__box
   width: 405px
   height: 316px
@@ -1259,7 +1279,8 @@ footer
 .reviews-slider__dots, .popular-category-slider__dots
   .slick-dots
     li
-      background: #F6F4F9
+      &:before
+        background: #F6F4F9
     .slick-active
       background: $accent2
 
@@ -1612,9 +1633,8 @@ footer
     fill: #4EA746
     margin: 0 8px 0 0
 
-//popular-category
-//.popular-category
-//  padding: 0 0 70px
+.popular-category-slider
+  padding-left: 25px
 
 .popular-category__box
   width: 405px
