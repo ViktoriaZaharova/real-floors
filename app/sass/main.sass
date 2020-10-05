@@ -1370,9 +1370,10 @@ footer
   width: 100%
   display: flex
   align-items: center
-  flex-wrap: wrap
   border-bottom: 1px solid #F6F4F9
+  overflow-x: auto
   li
+    white-space: nowrap
     padding: 0 10px 16px
     position: relative
     display: flex
@@ -1412,7 +1413,7 @@ footer
   display: block
 
 .row
-  width: 100%
+  width: calc(100% + 12.5px)
   display: flex
   align-items: stretch
   flex-wrap: wrap
@@ -1439,7 +1440,8 @@ footer
     .product-card__body
       height: auto
 
-
+.links-add-card
+  display: none
 
 .btn-add-card
   width: 100%
@@ -1639,6 +1641,9 @@ footer
       font-weight: normal
     strong
       color: $accent2
+      text-align: right
+    p
+      text-align: right
 
 .product-card__footer
   width: 100%

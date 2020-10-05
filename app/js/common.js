@@ -78,7 +78,16 @@ $('.popular-category-slider').slick({
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>',
     appendArrows: '.popular-category-slider__nav',
-    appendDots: '.popular-category-slider__dots'
+    appendDots: '.popular-category-slider__dots',
+    responsive: [
+        {
+            breakpoint: 480,
+            settings: {
+                appendArrows: '.popular-category-slider',
+                arrows: true
+            }
+        }
+    ]
 });
 
 $('.article-slider').slick({
