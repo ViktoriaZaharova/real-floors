@@ -2280,6 +2280,8 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin: 40px auto; }
   .mobile-menu .home-menu__item {
     margin: 0 0 18px; }
@@ -2787,7 +2789,8 @@ footer {
   .products-section .container {
     padding: 0; }
   .tabs__caption {
-    padding: 0 0 0 20px; }
+    width: calc(100% - 40px);
+    margin: 0 20px 0 auto; }
     .tabs__caption li .icon-svg {
       width: 18px;
       height: 18px;
