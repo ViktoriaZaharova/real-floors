@@ -162,7 +162,7 @@ if(isAndroid || isWindows || isBlackberry || isiDevice){
 
     $('.menu-dropDown-submenu__links').click(function (e) {
         e.preventDefault();
-        $(this).siblings('.menu-dropDown-submenu-level2').fadeToggle().parents('.menu-dropDown-submenu__item').siblings('.menu-dropDown-submenu__item').fadeToggle();
+        $(this).siblings('.menu-dropDown-submenu-level2').fadeToggle().parents('.menu-dropDown-submenu__item').siblings('.menu-dropDown-submenu__item').fadeToggle().parents('.menu-dropDown__item').find('.menu-dropDown__links').toggleClass('opened');
     });
 
 }else{
