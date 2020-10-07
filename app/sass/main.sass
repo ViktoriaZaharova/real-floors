@@ -251,6 +251,41 @@ header
   color: #fff
   font-size: 14px
   font-weight: 500
+  padding: 7px 28px 7px 0
+  border-right: 1px solid #534268
+  transition: .3s ease
+  &:hover
+    background: $accent2
+  .icon-svg
+    fill: #fff
+    width: 16px
+    height: 16px
+
+.dropDown-wrapper
+  position: relative
+  cursor: pointer
+
+
+.dropDown-container
+  position: absolute
+  display: none
+  left: 0
+  top: 100%
+  width: 100%
+  z-index: 3
+  background: $accent
+  .menu-dropDown__item
+    width: 100%
+    border: none
+  .menu-dropDown__links
+    padding: 10px 15px
+    color: #fff
+    border: none
+      bottom: 1px solid #534268
+    &:hover
+      background: $accent2
+      border: none
+
 
 
 .location-item__text

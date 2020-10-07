@@ -5,14 +5,14 @@ $('.catalog-item').hover(function () {
     $('.header-dropDown').fadeIn();
 });
 
-$('.menu-dropDown__item').hover(function () {
-    $('.menu-dropDown__item').removeClass('active');
+$('.catalog-dropdown .menu-dropDown__item').hover(function () {
+    $('.catalog-dropdown .menu-dropDown__item').removeClass('active');
     $(this).addClass('active').parents('.header-dropDown').addClass('open');
 });
 //
-$('.menu-dropDown-submenu__item').hover(function () {
-    $('.menu-dropDown-submenu__item').removeClass('active');
-    $(this).addClass('active').parents('.menu-dropDown__item').addClass('active');
+$('.catalog-dropdown .menu-dropDown-submenu__item').hover(function () {
+    $('.catalog-dropdown .menu-dropDown-submenu__item').removeClass('active');
+    $(this).addClass('active').parents('.catalog-dropdown .menu-dropDown__item').addClass('active');
 });
 
 $(document).mouseout(function (e) { // событие клика по веб-документу
@@ -33,6 +33,10 @@ $(document).mouseout(function (e) { // событие клика по веб-д�
         blockParent.removeClass('open');
     }
 });
+
+$('.dropDown-wrapper').click(function () {
+    $(this).find('.dropDown-container').fadeToggle();
+})
 
 $('.main-home__slider').slick({
     slidesToShow: 1,
