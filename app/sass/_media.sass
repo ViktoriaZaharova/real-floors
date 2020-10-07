@@ -295,7 +295,15 @@
     column-count: 1
 
   .menu-dropDown__links
-    padding: 14px 20px
+    padding: 7.5px 0 7.5px 20px
+    height: 46px
+    &:after
+      width: 50px
+      padding: 5px
+      height: 29px
+      border-left: 1px solid #F6F4F9
+      -webkit-background-size: 10px
+      background-size: 10px
 
   .menu-dropDown__links:hover:after
     transform: rotate(0)
@@ -304,7 +312,7 @@
     background: #fff
 
   .menu-dropDown-submenu__links
-    padding: 14px 20px 14px 35px
+    padding: 7.5px 0 7.5px 35px
 
   .menu-dropDown__item
     &:hover
@@ -376,6 +384,7 @@
     margin: 0 0 10px
     &:last-child
       margin: 0
+
 
 
 @media only screen and (max-width : 768px)

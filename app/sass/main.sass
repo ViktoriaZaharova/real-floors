@@ -286,6 +286,8 @@ header
       background: $accent2
       border: none
 
+
+
 .location-item__text
   margin: 0 0 0 6px
 
@@ -600,6 +602,36 @@ button
   &:after
     background: url("../img/arrow-bottom2.svg") no-repeat center
       size: contain
+
+.menu-dropDown__links.active
+  border: none
+    color: transparent
+  background: #F6F4F9
+  padding: 0 0 0 20px
+  height: 46px
+  &:after
+    background: $accent2 url("../img/arrow-right2.svg") no-repeat center
+      size: 10px
+    border-color: transparent
+    height: 100%
+    transform: none
+
+.menu-dropDown__links.active:hover
+  background: #F6F4F9
+
+.menu-dropDown-submenu__links.active
+  border-bottom: 1px solid #F6F4F9
+  padding: 0 0 0 35px
+  background: #fff
+  &:after
+    background: transparent url("../img/arrow-bottom2.svg") no-repeat center
+      size: 10px
+    border-color: transparent
+    height: 100%
+    transform: none
+    
+.menu-dropDown-submenu__links.active:hover
+  background: #fff
 
 .menu-dropDown-submenu__item
   &:hover

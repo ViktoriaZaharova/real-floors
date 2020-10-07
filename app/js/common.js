@@ -157,12 +157,12 @@ if(isAndroid || isWindows || isBlackberry || isiDevice){
     });
     $('.menu-dropDown__links').click(function (e) {
         e.preventDefault();
-        $(this).siblings('.menu-dropDown-submenu').slideToggle();
+        $(this).toggleClass('active').siblings('.menu-dropDown-submenu').slideToggle().parents('.menu-dropDown__item').siblings('.menu-dropDown__item').fadeToggle();
     });
 
     $('.menu-dropDown-submenu__links').click(function (e) {
         e.preventDefault();
-        $(this).siblings('.menu-dropDown-submenu-level2').fadeToggle();
+        $(this).siblings('.menu-dropDown-submenu-level2').fadeToggle().parents('.menu-dropDown-submenu__item').siblings('.menu-dropDown-submenu__item').fadeToggle();
     });
 
 }else{
