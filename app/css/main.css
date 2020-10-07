@@ -1092,14 +1092,13 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 100%; }
   .links-accent .icon-svg {
     width: 10px;
     height: 10px;
     fill: #F57600; }
+  .links-accent:hover, .links-accent:focus {
+    color: #F57600; }
 
 .article-slider__wrapper {
   width: 100%;
@@ -2672,18 +2671,6 @@ footer {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 700px) {
-  .tabs__caption {
-    position: relative; }
-    .tabs__caption:before {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100%;
-      width: 62px;
-      background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(70.31%, #FFFFFF));
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 70.31%);
-      z-index: 1; }
   .about-content__numbers {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2775,6 +2762,18 @@ footer {
       width: 18px;
       height: 18px;
       margin: 0 8px 0 0; }
+  .tabs {
+    position: relative; }
+    .tabs:before {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 72px;
+      height: 36px;
+      width: 62px;
+      background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(70.31%, #FFFFFF));
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 70.31%);
+      z-index: 1; }
   .footer-top .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2829,7 +2828,15 @@ footer {
     margin: 28px auto;
     text-align: center; }
   .btn-scroll-top {
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .location-item {
+    font-size: 12px;
+    padding: 0;
+    border: none; }
+  .dropDown-item:after {
+    margin: 0 0 0 10px; }
+  .location-wrapper .menu-dropDown__links {
+    font-size: 12px; } }
 
 @media only screen and (max-width: 480px) {
   .title-slider {

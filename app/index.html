@@ -34,12 +34,20 @@
             </svg>
         </div>
 
-        <div class="location-wrapper">
-            <select name="select_menu" class="select-menu location-item">
-                <option>Санкт-Петербург</option>
-                <option>Москва</option>
-                <option>Ростов-на-Дону</option>
-            </select>
+        <div class="location-wrapper dropDown-wrapper">
+            <div class="dropDown-item location-item">
+                <svg class="icon-svg">
+                    <use xlink:href="img/sprite.svg#location"></use>
+                </svg>
+                <div class="location-item__text">Санкт-Петербург</div>
+            </div>
+            <div class="dropDown-container">
+                <ul class="menu-dropDown">
+                    <li class="menu-dropDown__item"><a href="#" class="menu-dropDown__links">Москва</a></li>
+                    <li class="menu-dropDown__item"><a href="#" class="menu-dropDown__links">Санкт-Петербург</a></li>
+                    <li class="menu-dropDown__item"><a href="#" class="menu-dropDown__links">Ростов-на-Дону</a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="store-quantity bg-accent">4 магазина</div>
@@ -16513,53 +16521,7 @@
                 </div>
             </div>
         </div>
-        <div class="slide">
-            <div class="staff-slider__box">
-                <div class="quote">
-                    <p>Вы выбираете - мы помогаем!</p>
-                </div>
 
-                <div class="staff-slider__box-bottom">
-                    <div class="avatar"><img src="img/ava5.jpg" alt=""></div>
-                    <div class="name-user">
-                        <h3 class="name">Людмила Реуцкая</h3>
-                        <div class="position-user">менеджер по продажам</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <div class="staff-slider__box">
-                <div class="quote">
-                    <p>Деловая репутация - наш главный актив!</p>
-                </div>
-
-                <div class="staff-slider__box-bottom">
-                    <div class="avatar"><img src="img/ava2.jpg" alt=""></div>
-                    <div class="name-user">
-                        <h3 class="name">Дарья Нахапетова</h3>
-                        <div class="position-user">главный бухгалтер</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <div class="staff-slider__box">
-                <div class="quote">
-                    <p>Мы не продаём - мы даем лучшие советы!</p>
-                </div>
-
-                <div class="staff-slider__box-bottom">
-                    <div class="avatar"><img src="img/ava1.jpg" alt=""></div>
-                    <div class="name-user">
-                        <h3 class="name">Антон Падерин</h3>
-                        <div class="position-user">руководитель отдела продаж</div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <div class="slider-dots staff-slider__dots"></div>

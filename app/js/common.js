@@ -36,7 +36,18 @@ $(document).mouseout(function (e) { // событие клика по веб-д�
 
 $('.dropDown-wrapper').click(function () {
     $(this).find('.dropDown-container').fadeToggle();
-})
+});
+
+$(document).mouseup(function (e) { // событие клика по веб-документу
+    var div = $(".dropDown-wrapper"); // тут указываем ID элемента
+    var btn = $('.dropDown-container');
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        && !btn.is(e.target) && btn.has(e.target).length === 0
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        // div.fadeOut(); // скрываем его
+        btn.fadeOut();
+    }
+});
 
 $('.main-home__slider').slick({
     slidesToShow: 1,
@@ -55,13 +66,13 @@ $('.main-home__slider').slick({
 });
 
 $('.staff-slider').slick({
-    slidesToShow: 4,
+    slidesToShow: 3,
     variableWidth: true,
     dots: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>',
     appendArrows: '.staff-slider__nav',
-    infinite: false,
+    infinite: true,
     appendDots: '.staff-slider__dots',
     responsive: [
         {

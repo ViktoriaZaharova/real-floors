@@ -431,18 +431,6 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 700px)
-  .tabs__caption
-    position: relative
-    &:before
-      content: ''
-      position: absolute
-      right: 0
-      top: 0
-      height: 100%
-      width: 62px
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 70.31%)
-      z-index: 1
-
   .about-content__numbers
     flex-direction: column
     align-items: center
@@ -547,6 +535,19 @@
         height: 18px
         margin: 0 8px 0 0
 
+  .tabs
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      right: -15px
+      top: 72px
+      height: 36px
+      width: 62px
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 70.31%)
+      z-index: 1
+
+
   .footer-top .container
     flex-direction: column
     align-items: flex-start
@@ -599,6 +600,18 @@
 
   .btn-scroll-top
     margin: 0 auto
+
+  .location-item
+    font-size: 12px
+    padding: 0
+    border: none
+
+  .dropDown-item:after
+    margin: 0 0 0 10px
+
+  .location-wrapper
+    .menu-dropDown__links
+      font-size: 12px
 
 @media only screen and (max-width : 480px)
   .title-slider
