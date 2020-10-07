@@ -196,6 +196,9 @@
   .footer-item:first-child
     margin-right: 0
 
+  .header-dropDown.open
+    width: 100%
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 830px)
   .ui-widget, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active, .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus, .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus
@@ -238,6 +241,29 @@
   .form-search
     display: none
 
+  .form-search-pc
+    width: 100%
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 2
+    background: #F6F4F9
+    label
+      width: calc(100% - 88px)
+      float: left
+    input
+      height: 46px
+      padding: 0 20px 0 46px
+      font-size: 12px
+    button
+      width: 88px
+      font-size: 14px
+      height: 46px
+    .icon-search
+      left: 20px
+      width: 16px
+      height: 16px
+
   .form-search-mobile
     display: flex
     width: calc(100% - 180px)
@@ -249,6 +275,7 @@
     position: relative
     left: 0
     top: 0
+
 
   .header-dropDown.open
     width: 100%
@@ -275,6 +302,19 @@
 
   .menu-dropDown__links:hover
     background: #fff
+
+  .menu-dropDown-submenu__links
+    padding: 14px 20px 14px 35px
+
+  .menu-dropDown__item
+    &:hover
+      .menu-dropDown-submenu
+        display: none
+
+  .menu-dropDown-submenu__item
+    &:hover
+      .menu-dropDown-submenu-level2
+        display: none
 
   .main-home .box-column
     width: 100%

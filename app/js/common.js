@@ -1,38 +1,6 @@
 $('.select-menu').selectmenu();
 
-$('.catalog-item').hover(function () {
-    $(this).addClass('active');
-    $('.header-dropDown').fadeIn();
-});
 
-$('.catalog-dropdown .menu-dropDown__item').hover(function () {
-    $('.catalog-dropdown .menu-dropDown__item').removeClass('active');
-    $(this).addClass('active').parents('.header-dropDown').addClass('open');
-});
-//
-$('.catalog-dropdown .menu-dropDown-submenu__item').hover(function () {
-    $('.catalog-dropdown .menu-dropDown-submenu__item').removeClass('active');
-    $(this).addClass('active').parents('.catalog-dropdown .menu-dropDown__item').addClass('active');
-});
-
-$(document).mouseout(function (e) { // событие клика по веб-документу
-    var div = $(".catalog-item"); // тут указываем ID элемента
-    var btn = $('.header-dropDown');
-    if (!div.is(e.target) // если клик был не по нашему блоку
-        && !btn.is(e.target) && btn.has(e.target).length === 0) {
-        div.removeClass('active');
-        btn.fadeOut();
-    }
-});
-
-$(document).mouseout(function (e) { // событие клика по веб-документу
-    var div = $(".menu-dropDown__item"); // тут указываем ID элемента
-    var blockParent = $('.header-dropDown');
-    if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
-        div.removeClass('active');
-        blockParent.removeClass('open');
-    }
-});
 
 $('.dropDown-wrapper').click(function () {
     $(this).find('.dropDown-container').fadeToggle();
@@ -169,25 +137,66 @@ $('.btn-close').click(function () {
     $('.mobile-menu').fadeOut();
 });
 
-// Menu Tachscrin. если есть выпадающий список по hover. Первый клик-выпадает меню, второй клик-переход по ссылке
-function isTouchDevice() {
-    return typeof window.ontouchstart !== 'undefined';
-}
 
-jQuery(document).ready(function () {
-    /* If mobile browser, prevent click on parent nav item from redirecting to URL */
-    if (isTouchDevice()) {
-        // 1st click, add "clicked" class, preventing the location change. 2nd click will go through.
-        jQuery(".top-menu__item--parent > a").click(function (event) {
-            // Perform a reset - Remove the "clicked" class on all other menu items
-            jQuery(".top-menu__item--parent > a").not(this).removeClass("clicked");
-            jQuery(this).toggleClass("clicked");
-            if (jQuery(this).hasClass("clicked")) {
-                event.preventDefault();
-            }
-        });
-    }
+
+$('.form-search-mobile').click(function (e) {
+    e.preventDefault();
+    $('.form-search').fadeIn();
+    $('.form-search-mobile').fadeOut();
 });
-// Menu Tachscrin end
-// new line
 
+var isAndroid = /android/i.test(navigator.userAgent.toLowerCase());
+var isWindows = /windows phone/i.test(navigator.userAgent.toLowerCase());
+var isBlackberry = /blackberry/i.test(navigator.userAgent.toLowerCase());
+var isiDevice = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+
+if(isAndroid || isWindows || isBlackberry || isiDevice){
+    $('.catalog-item').click(function () {
+        $(this).toggleClass('active');
+        $('.header-dropDown').fadeToggle();
+    });
+    $('.menu-dropDown__links').click(function (e) {
+        e.preventDefault();
+        $(this).siblings('.menu-dropDown-submenu').slideToggle();
+    });
+
+    $('.menu-dropDown-submenu__links').click(function (e) {
+        e.preventDefault();
+        $(this).siblings('.menu-dropDown-submenu-level2').fadeToggle();
+    });
+
+}else{
+    $('.catalog-item').hover(function () {
+        $(this).addClass('active');
+        $('.header-dropDown').fadeIn();
+    });
+
+    $('.catalog-dropdown .menu-dropDown__item').hover(function () {
+        $('.catalog-dropdown .menu-dropDown__item').removeClass('active');
+        $(this).addClass('active').parents('.header-dropDown').addClass('open');
+    });
+
+    $('.catalog-dropdown .menu-dropDown-submenu__item').hover(function () {
+        $('.catalog-dropdown .menu-dropDown-submenu__item').removeClass('active');
+        $(this).addClass('active').parents('.catalog-dropdown .menu-dropDown__item').addClass('active');
+    });
+
+    $(document).mouseout(function (e) { // событие клика по веб-документу
+        var div = $(".catalog-item"); // тут указываем ID элемента
+        var btn = $('.header-dropDown');
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && !btn.is(e.target) && btn.has(e.target).length === 0) {
+            div.removeClass('active');
+            btn.fadeOut();
+        }
+    });
+
+    $(document).mouseout(function (e) { // событие клика по веб-документу
+        var div = $(".menu-dropDown__item"); // тут указываем ID элемента
+        var blockParent = $('.header-dropDown');
+        if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            div.removeClass('active');
+            blockParent.removeClass('open');
+        }
+    });
+}
