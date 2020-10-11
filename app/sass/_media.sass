@@ -227,16 +227,20 @@
 
   .catalog-item
     width: 180px
-    padding: 15px 20px
+    padding: 0 15px 0 0
     font-size: 12px
+
+  .catalog-item__links
+    padding: 15px 0 15px 20px
     &:before
       width: 16px
       height: 16px
       margin: 0 10px 0 0
-    &:after
-      margin: 0 0 0 auto
-      width: 8px
-      height: 8px
+
+  .catalog-item__drop-icon
+    margin: 0 0 0 auto
+    width: 8px
+    height: 8px
 
   .form-search
     display: none
@@ -496,22 +500,20 @@
     width: 100%
     margin: 0 auto
 
-  .col-20
-    width: 100%
-
   .products-tabs
-    display: none
-
-  .products-slider
-    display: block
+    width: 100%
+    .col-20
+      height: 479px
+      width: 258px
+      margin: 11px 11px 23px
     .slick-center
-      .product-card
-        margin: 0 11px 23px
+      margin: 0 11px 23px
+
 
   .product-card
     height: 479px
     width: 258px
-    margin: 11px 11px 23px
+
     &:hover
       .product-card__body
         height: 100%

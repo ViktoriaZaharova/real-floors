@@ -255,7 +255,7 @@ header
   border-right: 1px solid #534268
   transition: .3s ease
   &:hover
-    background: $accent2
+    color: $accent2
   .icon-svg
     fill: #fff
     width: 16px
@@ -427,14 +427,30 @@ header
 .catalog-item
   background: #38294B
   color: #fff
-  padding: 17.5px 25px
+  padding: 0 25px 0 0
   font-weight: 500
   font-size: 16px
   cursor: pointer
   transition: .3s ease
   width: 248px
-  &:after
-    margin: 0 0 0 31px
+  display: flex
+  align-items: center
+
+
+.catalog-item__drop-icon
+  margin: 0 0 0 31px
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.catalog-item__links
+  position: relative
+  height: 100%
+  display: flex
+  align-items: center
+  color: #fff
+  padding: 17.5px 0 17.5px 25px
   &:before
     content: ''
     display: inline-block
@@ -446,7 +462,7 @@ header
 
 .catalog-item.active
   background: $accent2
-  &:after
+  .catalog-item__drop-icon
     transform: rotate(-180deg)
 
 .menu
@@ -1512,9 +1528,9 @@ footer
   width: 20%
   padding: 0 12.5px
 
-.products-slider
-  display: none
+.products-tabs
   .slick-dots
+    position: relative
     li
       &:before
         background: #F6F4F9
